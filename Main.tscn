@@ -1,0 +1,151 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Main.vs" type="Script" id=1]
+[ext_resource path="res://ColorRect.vs" type="Script" id=2]
+[ext_resource path="res://dodge_assets/art/enemyFlyingAlt_1.png" type="Texture" id=3]
+[ext_resource path="res://dodge_assets/art/enemyFlyingAlt_2.png" type="Texture" id=4]
+[ext_resource path="res://MobInstanceHelper.gd" type="Script" id=5]
+[ext_resource path="res://Mob.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=7]
+[ext_resource path="res://dodge_assets/art/playerGrey_up1.png" type="Texture" id=8]
+[ext_resource path="res://dodge_assets/art/TrailTextures/playerGrey_down.png" type="Texture" id=9]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=10]
+[ext_resource path="res://dodge_assets/art/House In a Forest Loop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://dodge_assets/art/gameover.wav" type="AudioStream" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="Curve2D" id=2]
+
+bake_interval = 5.0
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 720, 0, 0, 0, 0, 0, 720, 0, 0, 0, 0, 0, 0 )
+}
+
+[node name="Main" type="Node"]
+
+script = ExtResource( 1 )
+mother_creep_blink_speed = 1.0
+
+[node name="BackgroundColor" type="ColorRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 480.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.0582581, 0.119921, 0.179688, 1 )
+script = ExtResource( 2 )
+transition_colors = PoolColorArray( 0.222656, 0.0869751, 0.0869751, 1, 0.0891113, 0.119743, 0.285156, 1, 0.111282, 0.265625, 0.0892334, 1, 0.25, 0.239441, 0.0810547, 1, 0.0628357, 0.169002, 0.226562, 1 )
+color_lerp_speed = 0.5
+
+[node name="BackgroundColorTimer" type="Timer" parent="BackgroundColor" index="0"]
+
+process_mode = 1
+wait_time = 3.0
+one_shot = false
+autostart = false
+
+[node name="MotherCreep" type="AnimatedSprite" parent="." index="1"]
+
+position = Vector2( 241, 696 )
+rotation = -1.5708
+scale = Vector2( 3.30556, 2.56989 )
+frames = SubResource( 1 )
+animation = "default"
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="MobInstanceHelper" type="Node" parent="." index="2"]
+
+script = ExtResource( 5 )
+Mob = ExtResource( 6 )
+
+[node name="Player" parent="." index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 100, 100 )
+trail_textures = [ ExtResource( 8 ), ExtResource( 9 ) ]
+
+[node name="MobTimer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = false
+
+[node name="ScoreTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="StartTimer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="StartPosition" type="Position2D" parent="." index="7"]
+
+position = Vector2( 240, 450 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="MobPath" type="Path2D" parent="." index="8"]
+
+curve = SubResource( 2 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath" index="0"]
+
+offset = 0.0
+h_offset = 0.0
+v_offset = 0.0
+rotate = true
+cubic_interp = true
+loop = true
+lookahead = 4.0
+
+[node name="HUD" parent="." index="9" instance=ExtResource( 10 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="10"]
+
+stream = ExtResource( 11 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." index="11"]
+
+stream = ExtResource( 12 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[connection signal="timeout" from="BackgroundColor/BackgroundColorTimer" to="BackgroundColor" method="choose_a_new_color"]
+
+[connection signal="hit" from="Player" to="." method="game_over"]
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]
+
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+
+[connection signal="start_game" from="HUD" to="." method="new_game"]
+
+
