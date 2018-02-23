@@ -1,0 +1,12 @@
+* This is a test document.
+** Is the preview optimal?
+#+CAPTION: fdfads
+#+ATTR_HTML: :alt fdsfdsafdsafdsa :title fdsafdsafsda :align left :width 320px :height 200:px
+ [[./Screenshot.png]]
+** And here is some table data
+| ID | Some data    |
+|----+--------------|
+|  1 | Lala         |
+|  2 | Blabla       |
+|  3 | Skubidubiduu |
+|----+--------------|

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <!-- 2018-02-24 S  00:10 -->
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>&lrm;</title>
+    <meta name="generator" content="Org mode" />
+    <meta name="author" content="Janis Mancevics" />
+    <style type="text/css">
+      <!--/*--><![CDATA[/*><!--*/
+
+
+/* Link properties */
+a:link, a:visited, a:hover, a:active {
+font-family: Helvetica, Arial, Times, serif;
+font-style: italic;
+font-size: 120%;
+margin-right: 2%;
+}
+
+/* unvisited link */
+a:link {
+color: #c9761e;
+text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+color: #c9761e;
+text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+color: #ff9626;
+text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+color: #e08523;
+text-decoration: underline;
+}
+
+p {
+margin-right: 2%;
+}
+
+li {
+margin-right: 2%;
+}
+
+html {
+height: 100%;
+}
+body {
+height: 100%;
+margin: 0;
+color:#333333;
+font-size: 120%;
+font-style: italic;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+background: #eeeeee; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(90deg, #dddddd, #ffffff); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(90deg, #dddddd, #ffffff); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(90deg, #dddddd, #ffffff); /* For Firefox 3.6 to 15 */
+background: linear-gradient(90deg, #dddddd, #ffffff); /* Standard syntax (must be last) */
+}
+
+.src-title {
+color:#333333;
+font-size: 120%;
+font-style: italic;
+background-repeat: no-repeat;
+background-attachment: fixed;
+height: 33px;
+margin-bottom: 0em;
+margin-top: 0em;
+margin-left: 0.97em;
+margin-right: 0.97em;
+
+background: #666666; /* For browsers that do not support gradients */
+background: -webkit-linear-gradient(177deg, #444444, #dddddd); /* For Safari 5.1 to 6.0 */
+background: -o-linear-gradient(177deg, #444444, #dddddd); /* For Opera 11.1 to 12.0 */
+background: -moz-linear-gradient(177deg, #444444, #dddddd); /* For Firefox 3.6 to 15 */
+background: linear-gradient(177deg, #444444, #dddddd); /* Standard syntax (must be last) */
+}
+
+.src-title-span {
+color:#ffffff;
+font-size: 100%;
+font-style: normal;
+display: inline-block;
+margin-bottom: 0.2em;
+margin-top: 0.2em;
+margin-left: 0.97em;
+margin-right: 0.97em;
+}
+
+
+.title	{ text-align: center;
+margin-bottom: .2em; }
+.subtitle { text-align: center;
+font-size: medium;
+font-weight: bold;
+margin-top:0; }
+.todo	{ font-family: monospace; color: red; }
+.done	{ font-family: monospace; color: green; }
+.priority { font-family: monospace; color: orange; }
+.tag	{ background-color: #eee; font-family: monospace;
+padding: 2px; font-size: 80%; font-weight: normal; }
+.timestamp { color: #bebebe; }
+.timestamp-kwd { color: #5f9ea0; }
+.org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+.org-left	  { margin-left: 0px;  margin-right: auto; text-align: left; }
+.org-center { margin-left: auto; margin-right: auto; text-align: center; }
+.underline { text-decoration: underline; }
+#postamble p, #preamble p { font-size: 90%; margin: .2em; }
+
+p.verse { margin-left: 3%; }
+pre {
+border: 0px solid #ccc;
+color: #eeeeee;
+background-color: #444444;
+box-shadow: 0px 0px 0px #eee;
+padding: 8pt;
+font-family: monospace;
+font-style: normal;
+font-size: 120%;
+overflow: auto;
+margin-left: 1.2em;
+margin-right: 1.2em;
+margin-top: 0em;
+}
+pre.src {
+position: relative;
+overflow: auto;
+padding-top: 0em;
+padding-left: 0em;
+padding-bottom: 0em;
+}
+
+pre.src:before {
+display: none;
+position: absolute;
+background-color: white;
+top: -10px;
+right: 10px;
+padding: 3px;
+border: 1px solid black;
+}
+pre.src:hover:before { display: inline;}
+/* Languages per Org manual */
+pre.src-asymptote:before { content: 'Asymptote'; }
+pre.src-awk:before { content: 'Awk'; }
+pre.src-C:before { content: 'C'; }
+/* pre.src-C++ doesn't work in CSS */
+pre.src-clojure:before { content: 'Clojure'; }
+pre.src-css:before { content: 'CSS'; }
+pre.src-D:before { content: 'D'; }
+pre.src-ditaa:before { content: 'ditaa'; }
+pre.src-dot:before { content: 'Graphviz'; }
+pre.src-calc:before { content: 'Emacs Calc'; }
+pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+pre.src-fortran:before { content: 'Fortran'; }
+pre.src-gnuplot:before { content: 'gnuplot'; }
+pre.src-haskell:before { content: 'Haskell'; }
+pre.src-hledger:before { content: 'hledger'; }
+pre.src-java:before { content: 'Java'; }
+pre.src-js:before { content: 'Javascript'; }
+pre.src-latex:before { content: 'LaTeX'; }
+pre.src-ledger:before { content: 'Ledger'; }
+pre.src-lisp:before { content: 'Lisp'; }
+pre.src-lilypond:before { content: 'Lilypond'; }
+pre.src-lua:before { content: 'Lua'; }
+pre.src-matlab:before { content: 'MATLAB'; }
+pre.src-mscgen:before { content: 'Mscgen'; }
+pre.src-ocaml:before { content: 'Objective Caml'; }
+pre.src-octave:before { content: 'Octave'; }
+pre.src-org:before { content: 'Org mode'; }
+pre.src-oz:before { content: 'OZ'; }
+pre.src-plantuml:before { content: 'Plantuml'; }
+pre.src-processing:before { content: 'Processing.js'; }
+pre.src-python:before { content: 'Python'; }
+pre.src-R:before { content: 'R'; }
+pre.src-ruby:before { content: 'Ruby'; }
+pre.src-sass:before { content: 'Sass'; }
+pre.src-scheme:before { content: 'Scheme'; }
+pre.src-screen:before { content: 'Gnu Screen'; }
+pre.src-sed:before { content: 'Sed'; }
+pre.src-sh:before { content: 'shell'; }
+pre.src-sql:before { content: 'SQL'; }
+pre.src-sqlite:before { content: 'SQLite'; }
+/* additional languages in org.el's org-babel-load-languages alist */
+pre.src-forth:before { content: 'Forth'; }
+pre.src-io:before { content: 'IO'; }
+pre.src-J:before { content: 'J'; }
+pre.src-makefile:before { content: 'Makefile'; }
+pre.src-maxima:before { content: 'Maxima'; }
+pre.src-perl:before { content: 'Perl'; }
+pre.src-picolisp:before { content: 'Pico Lisp'; }
+pre.src-scala:before { content: 'Scala'; }
+pre.src-shell:before { content: 'Shell Script'; }
+pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+/* additional language identifiers per "defun org-babel-execute"
+in ob-*.el */
+pre.src-cpp:before  { content: 'C++'; }
+pre.src-abc:before  { content: 'ABC'; }
+pre.src-coq:before  { content: 'Coq'; }
+pre.src-groovy:before  { content: 'Groovy'; }
+/* additional language identifiers from org-babel-shell-names in
+ob-shell.el: ob-shell is the only babel language using a lambda to put
+the execution function name together. */
+pre.src-bash:before  { content: 'bash'; }
+pre.src-csh:before  { content: 'csh'; }
+pre.src-ash:before  { content: 'ash'; }
+pre.src-dash:before  { content: 'dash'; }
+pre.src-ksh:before  { content: 'ksh'; }
+pre.src-mksh:before  { content: 'mksh'; }
+pre.src-posh:before  { content: 'posh'; }
+/* Additional Emacs modes also supported by the LaTeX listings package */
+pre.src-ada:before { content: 'Ada'; }
+pre.src-asm:before { content: 'Assembler'; }
+pre.src-caml:before { content: 'Caml'; }
+pre.src-delphi:before { content: 'Delphi'; }
+pre.src-html:before { content: 'HTML'; }
+pre.src-idl:before { content: 'IDL'; }
+pre.src-mercury:before { content: 'Mercury'; }
+pre.src-metapost:before { content: 'MetaPost'; }
+pre.src-modula-2:before { content: 'Modula-2'; }
+pre.src-pascal:before { content: 'Pascal'; }
+pre.src-ps:before { content: 'PostScript'; }
+pre.src-prolog:before { content: 'Prolog'; }
+pre.src-simula:before { content: 'Simula'; }
+pre.src-tcl:before { content: 'tcl'; }
+pre.src-tex:before { content: 'TeX'; }
+pre.src-plain-tex:before { content: 'Plain TeX'; }
+pre.src-verilog:before { content: 'Verilog'; }
+pre.src-vhdl:before { content: 'VHDL'; }
+pre.src-xml:before { content: 'XML'; }
+pre.src-nxml:before { content: 'XML'; }
+/* add a generic configuration mode; LaTeX export needs an additional
+(add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+pre.src-conf:before { content: 'Configuration File'; }
+
+table { border-collapse:collapse; }
+caption.t-above { caption-side: top; }
+caption.t-bottom { caption-side: bottom; }
+td, th { vertical-align:top;  }
+th.org-right  { text-align: center;  }
+th.org-left   { text-align: center;   }
+th.org-center { text-align: center; }
+td.org-right  { text-align: right;  }
+td.org-left   { text-align: left;	  }
+td.org-center { text-align: center; }
+dt { font-weight: bold; }
+.footpara { display: inline; }
+.footdef	{ margin-bottom: 1em; }
+.figure { padding: 1em; }
+.figure p { text-align: center; }
+.inlinetask {
+padding: 10px;
+border: 2px solid gray;
+margin: 10px;
+background: #ffffcc;
+}
+#org-div-home-and-up
+{ text-align: right; font-size: 70%; white-space: nowrap; }
+textarea { overflow-x: auto; }
+.linenr { font-size: 100%; background: #3d3d3d;}
+.code-highlighted { background-color: #ffff00; }
+.org-info-js_info-navigation { border-style: none; }
+#org-info-js_console-label
+{ font-size: 10px; font-weight: bold; white-space: nowrap; }
+.org-info-js_search-highlight
+{ background-color: #ffff00; color: #000000; font-weight: bold; }
+.org-svg { width: 90%; }
+/*]]>*/-->
+    </style>
+    <script type="text/javascript" src = "https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+
+
+      $(document).ready(function(){
+      $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+      event.preventDefault();
+      var position = target.position().top + $('#jm-document-body').scrollTop();
+      $('#jm-document-body').stop().animate({
+      scrollTop: position
+      }, 1000);
+      }
+      });
+      })
+
+      function ScrollToTop () {
+      try {
+      $(document).ready(function() {
+      $('#jm-document-body').stop().animate({
+      scrollTop: 0
+      }, 1000);
+      })
+      }
+      catch(err) {
+      var contentBody = document.getElementById("jm-document-body");
+      contentBody.scrollTop = 0;
+      }
+      }
+
+
+      /*
+      @licstart	 The following is the entire license notice for the
+      JavaScript code in this tag.
+
+      Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+      The JavaScript code in this tag is free software: you can
+      redistribute it and/or modify it under the terms of the GNU
+      General Public License (GNU GPL) as published by the Free Software
+      Foundation, either version 3 of the License, or (at your option)
+      any later version.  The code is distributed WITHOUT ANY WARRANTY;
+      without even the implied warranty of MERCHANTABILITY or FITNESS
+      FOR A PARTICULAR PURPOSE.	 See the GNU GPL for more details.
+
+      As additional permission under GNU GPL version 3 section 7, you
+      may distribute non-source (e.g., minimized or compacted) forms of
+      that code without the copy of the GNU GPL normally required by
+      section 4, provided you include this license notice and a URL
+      through which recipients can access the Corresponding Source.
+
+
+      @licend  The above is the entire license notice
+      for the JavaScript code in this tag.
+      */
+      <!--/*--><![CDATA[/*><!--*/
+      function CodeHighlightOn(elem, id)
+      {
+      var target = document.getElementById(id);
+      if(null != target) {
+      elem.cacheClassElem = elem.className;
+      elem.cacheClassTarget = target.className;
+      target.className = "code-highlighted";
+      elem.className   = "code-highlighted";
+      }
+      }
+      function CodeHighlightOff(elem, id)
+      {
+      var target = document.getElementById(id);
+      if(elem.cacheClassElem)
+      elem.className = elem.cacheClassElem;
+      if(elem.cacheClassTarget)
+      target.className = elem.cacheClassTarget;
+      }
+      /*]]>*///-->
+    </script>
+  </head>
+  <body>
+    <div id="jm-document-fixed-body" style="position:fixed; width:68%; height: 99%; left:2%; position:fixed;">
+      <div id="content">
+	<div id = "jm-content-table-background" style = "height: 100%; width:30%; left: 70%; top:0%; position:fixed; background-color: #eaeaea">
+	  <div id = "table-of-contents-header" style = "position:fixed; height: 100%; width:26%; top:2%; right:2%"><h2>Table of Contents</h2></div>
+	  <div id="table-of-contents" style="height: 90%; position:fixed; top:8%; right:2%; width:26%; overflow: hidden;" onmouseover = 'document.getElementById (this.id).style.overflow = "auto";' onmouseout = 'document.getElementById (this.id).style.overflow = "hidden";'>
+
+	    <div id="text-table-of-contents" style = "margin-right: 5%;">
+	      <ul>
+		<li><a href="#org7ed2ac9">1. This is a test document.</a>
+		<ul>
+		  <li><a href="#orgd4f7d7f">1.1. Is the preview optimal?</a></li>
+		  <li><a href="#org5fbc454">1.2. And here is some table data</a></li>
+		</ul>
+		</li>
+	      </ul>
+	    </div>
+	  </div>
+	</div>
+	<div id="jm-document-body" style="position:fixed; width:68%; height: 90%; top:3%; left:2%; overflow: hidden;" onmouseover = 'document.getElementById (this.id).style.overflow = "auto";' onmouseout = 'document.getElementById (this.id).style.overflow = "hidden";'>
+	  <div id="outline-container-org7ed2ac9" class="outline-2">
+	    <h2 id="org7ed2ac9"><span class="section-number-2">1</span> This is a test document.</h2>
+	    <div class="outline-text-2" id="text-1">
+	    </div>
+	    <div id="outline-container-orgd4f7d7f" class="outline-3">
+	      <h3 id="orgd4f7d7f"><span class="section-number-3">1.1</span> Is the preview optimal?</h3>
+	      <div class="outline-text-3" id="text-1-1">
+
+		<div class="figure">
+		  <p><img src="./Screenshot.png" alt="fdsfdsafdsafdsa" title="fdsafdsafsda" align="left" width="320px" height="200:px" />
+		  </p>
+		  <p><span class="figure-number">Figure 1: </span>fdfads</p>
+		</div>
+	      </div>
+	    </div>
+	    <div id="outline-container-org5fbc454" class="outline-3">
+	      <h3 id="org5fbc454"><span class="section-number-3">1.2</span> And here is some table data</h3>
+	      <div class="outline-text-3" id="text-1-2">
+		<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+		  <colgroup>
+		    <col  class="org-right" />
+
+		    <col  class="org-left" />
+		  </colgroup>
+		  <thead>
+		    <tr>
+		      <th scope="col" class="org-right">ID</th>
+		      <th scope="col" class="org-left">Some data</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td class="org-right">1</td>
+		      <td class="org-left">Lala</td>
+		    </tr>
+
+		    <tr>
+		      <td class="org-right">2</td>
+		      <td class="org-left">Blabla</td>
+		    </tr>
+
+		    <tr>
+		      <td class="org-right">3</td>
+		      <td class="org-left">Skubidubiduu</td>
+		    </tr>
+		  </tbody>
+		</table>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+      <div id="postamble" style = "position: fixed; top: 94%;" class="status">
+	<p class="author">Author: Janis Mancevics</p>
+	<p class="date">Created: 2018-02-24 S  00:10</p>
+	<div id = "return-to-top" style = "position: fixed; top: 95.5%; right: 33%;"><a href="#" onclick = "ScrollToTop ();" style = "margin-right: 0%;">Go to top</a></div>
+
+
+	<svg
+	    viewBox="0 0 59.200001 59.200001"
+	    height="7%"
+	    width="7%"
+	    id="svg64"
+	    version="1.1"
+	    style = "position: fixed; top: 91.5%; left: 13.5%;"
+	    >
+	  <path
+	      id="path76"
+	      d="m 0.8727941,52.513007 c -2.557978,-0.42448 -2.689368,-0.611712 -2.430066,-3.462861 1.248893,-13.732189 9.485472,-26.435904 20.8033449,-32.086106 3.175986,-1.585543 7.168168,-2.825131 16.190433,-5.027196 10.41752,-2.5426057 14.383312,-4.0332547 18.9232,-7.1127877 2.882963,-1.955594 2.949091,-1.942366 2.062601,0.412612 -1.144384,3.040079 -2.851382,6.2813847 -4.444188,8.4387827 -1.304541,1.766951 -2.541751,2.854452 -6.272346,5.513356 -0.889565,0.634019 -1.247168,1.066061 -1.005837,1.215213 0.837075,0.51734 4.335386,0.205457 6.466138,-0.576472 1.188,-0.435965 2.16,-0.723593 2.16,-0.639174 0,0.08442 -0.504122,1.110546 -1.120269,2.280283 -1.388467,2.635964 -3.820128,5.387985 -7.57752,8.575825 -3.359027,2.849856 -3.295994,3.167149 0.57976,2.918419 1.296915,-0.08323 2.358029,-0.07756 2.358029,0.01261 0,0.589344 -2.29112,3.533741 -3.976496,5.110327 -6.144564,5.747936 -15.915651,11.069376 -24.264134,13.214506 -5.740835,1.4751 -13.7137549,1.999068 -18.4526499,1.212678 z M 11.41611,42.013183 c 3.101366,-1.87608 4.523561,-3.306682 5.05689,-5.086774 0.635332,-2.120554 0.538917,-2.393297 -0.759904,-2.149636 -4.504158,0.844986 -8.2040489,4.634701 -9.0746869,9.294999 l -0.267151,1.42999 1.167444,-0.924633 c 0.642095,-0.508548 2.386928,-1.662324 3.8774079,-2.563946 z"
+	      style="fill:#000000;stroke-width:0.31999999" />
+	</svg>
+      </div>
+    </div>
+  </body>
+</html>
